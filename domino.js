@@ -4,7 +4,8 @@ const readline = require('readline').createInterface({
     output: process.stdout
 });
 
-const karakter = ["Mahiru", "Rem", "Seika", "Nijika", "Shizuka", "Hitori Gotoh", "Kurumi", "Chitanda", "Mitsuha", "Utahime", "Hinata", "Mitsuri", "Horikita", "Takagi", "Kubo", "Tsukasa", "Kanade", "Turnip", "Liyan", "MumtazG", "Umar", "Umaru", "Fathin"];
+const karakter = ["Rafy", "Turnip", "Onlyniki", "MumtazG", "Ubiungu", "Coderhero", "July", "Noa", "Fyo",
+"Kepin", "Gorengan", "Jin"];
 function gacha(pengen, pity) {
     let ampas = Math.floor(Math.random()*karakter.length)
     let gacor = []
@@ -31,15 +32,15 @@ function gacha(pengen, pity) {
 function main(pity, kode) {
     console.log("Udah main sebanyak: "+pity);
     readline.question(`${chalk.yellow('>==============================================<')}\nKamu Mau Siapa?\n${chalk.yellow('>==============================================<')}\nList Char: \n ${karakter} \n > `, pengen => {
-        if(!karakter.includes(pengen.replace(" (FATHIN222GACOR)", ""))){
+        if(!karakter.includes(pengen.replace(" (TURNIPGANTENG777GACOR)", ""))){
             console.log(chalk.redBright("MOHON GUNAKAN KARAKTER YANG ADA DIDALAM CONTOH TERMASUK PENGGUNAAN HURUF KAPITAL!!!"));
         }
-        if(kode && pengen.includes(" (FATHIN222GACOR)")){
+        if(kode && pengen.includes(" (TURNIPGANTENG777GACOR)")){
             console.log(chalk.redBright("ANDA SUDAH MENGGUNAKAN KODE"));
             main(pity)
         }
         console.log(gacha(pengen));
-        if(pengen.includes(" (FATHIN222GACOR)") || kode){
+        if(pengen.includes(" (TURNIPGANTENG777GACOR)") || kode){
             readline.question(chalk.cyan(`Pengen Main Lagi? (iya, tidak) > `), lagi => {
                 if(lagi.toLowerCase() === "iya"){
                         main(pity+1, true);                    
